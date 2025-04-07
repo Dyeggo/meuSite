@@ -497,18 +497,23 @@ footer .line-footer p a {
     }
 }
 
-@media screen and (max-width: 1565px) {
-
+@media screen and (max-width: 1500px) {
     /* CABEÇALHO */
     section.topo-do-site .flex {
         align-items: center;
-        flex-direction: column-reverse;
+        justify-content: center;
     }
 
+    .topo-do-site .img-topo-site img {
+        height: 220px;
+    }
+    
     .topo-do-site h1 {
         line-height: 38px;
-    }
+    } 
+}
 
+@media screen and (max-width: 1600px) {
     /* PORTFÒLIO */
     section.portfolio .flex {
         align-items: center;
