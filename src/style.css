@@ -497,15 +497,10 @@ footer .line-footer p a {
     }
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1570px) {
     /* CABEÇALHO */
-    section.topo-do-site .flex {
-        align-items: center;
-        justify-content: center;
-    }
-
     .topo-do-site .img-topo-site img {
-        height: 220px;
+        height: 250px;
     }
 
     .topo-do-site h1 {
