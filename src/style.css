@@ -3,7 +3,7 @@
 #particles-js {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 60%;
     top: 0;
     left: 0;
     z-index: -1;
@@ -489,6 +489,10 @@ footer .line-footer p a {
         text-align: center;
     }
 
+    .sobre .img-sobre {
+        display: none;
+    }
+
 }
 
 @media screen and (min-width: 1020px) {
@@ -509,6 +513,12 @@ footer .line-footer p a {
 }
 
 @media screen and (max-width: 1600px) {
+
+    /* Particulas */
+    #particles-js {
+        height: 80%;
+    }
+
     /* PORTFÒLIO */
     section.portfolio .flex {
         align-items: center;
