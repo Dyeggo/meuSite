@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site</title>
     <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="./src/erro.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="./scripts/menu.js" defer></script>
+    <script src="./scripts/formulario.js" defer></script>
 </head>
 
 <body>
@@ -184,16 +186,28 @@
 
                 <div class="flex">
 
-                    <form action="">
+                    <form id="form-contato">
 
-                        <input type="text" name="" id="" placeholder="Seu Nome Completo:" required>
-                        <input type="text" name="" id="" placeholder="Seu E-mail:" required>
-                        <input type="text" name="" id="" placeholder="Seu Celular:">
-                        <textarea name="" id="" placeholder="Sua Mensagem:" required></textarea>
+                        <input type="text" name="" id="nome" placeholder="Seu Nome Completo:" required>
+                        <span class="erro" id="erro-nome"></span>
+
+                        <input type="text" name="" id="email" placeholder="Seu E-mail:" required>
+                        <span class="erro" id="erro-email"></span>
+
+                        <input type="text" name="" id="telefone" placeholder="Seu Celular:" required>
+                        <span class="erro" id="erro-telefone"></span>
+
+                        <textarea name="" id="msg" placeholder="Sua Mensagem:" required></textarea>
+                        <span class="erro" id="erro-msg"></span>
 
                         <div class="btn-enviar"><input type="submit" value="Enviar"></div>
 
+                        <p id="mensagem-feedback"></p>
+
                     </form>
+
+                    
+
                 </div>
             </div>
         </section>

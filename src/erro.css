@@ -1,0 +1,9 @@
+
+.erro {
+    color: red;
+    font-size: 0.9em;
+}
+
+input.erro-campo, textarea.erro-campo {
+    border: 2px solid red;
+}
