@@ -79,6 +79,19 @@ ul li:hover {
     transform: scale(1.05);
 }
 
+.especialidades-box {
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.descricao-paragrafo {
+    margin-top: 10px;
+    font-size: 0.95em;
+    color: #666;
+    line-height: 1.4em;
+    display: none;
+}
+
 /* ESTILO DO MENU MOBILE */
 .btn-abrir-menu i {
     color: #81adff;
@@ -219,7 +232,7 @@ section.especialidades .flex {
 
 .especialidades .especialidades-box:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 10px #ffffff7a;
+    
 }
 
 .especialidades .especialidades-box i {

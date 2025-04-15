@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="./src/style.css">
     <link rel="stylesheet" href="./src/erro.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <script src="./scripts/menu.js" defer></script>
-    <script src="./scripts/formulario.js" defer></script>
 </head>
 
 <body>
@@ -96,26 +94,27 @@
 
                 <h2 class="titulo">MINHAS <span>ESPECIALIDADES.</span></h2>
 
-                <div class="flex">
+                <div class="flex descricao">
 
-                    <div class="especialidades-box">
+                    <div class="especialidades-box" id="landingPage">
                         <i class="bi bi-window-fullscreen"></i>
                         <h3>Landing page</h3>
-                        <p>Landing page que converte</p>
                     </div>
 
-                    <div class="especialidades-box">
+                    <div class="especialidades-box" id="siteInstitucional">
                         <i class="bi bi-stack"></i>
                         <h3>Site Institucional</h3>
-                        <p>Site Institucional para seu negócio</p>
                     </div>
 
-                    <div class="especialidades-box">
+                    <div class="especialidades-box" id="blog">
                         <i class="bi bi-wordpress"></i>
                         <h3>Blog</h3>
-                        <p>Blog pessoal, para mostrar seus pensamentos diarios</p>
                     </div>
                 </div>
+
+                <p class="descricao-paragrafo"></p>
+
+                
             </div>
         </section>
 
@@ -260,6 +259,9 @@
 
     </footer>
 
+    <script src="scripts/especialidades.js" defer></script>
+    <script src="./scripts/menu.js" defer></script>
+    <script src="./scripts/formulario.js" defer></script>
     <script src="./scripts/particles.js"></script>
     <script src="./scripts/particle-config.js"></script>
 </body>
