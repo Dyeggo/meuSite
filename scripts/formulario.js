@@ -1,21 +1,16 @@
+function limparErros() {
+    const erros = document.querySelectorAll(".erro");
+    erros.forEach(e => e.textContent = "");
+
+    const camposErro = document.querySelectorAll(".erro-campo");
+    camposErro.forEach(campo => campo.classList.remove("erro-campo"));
+}
 
 const form = document.getElementById("form-contato");
-const feedback = document.getElementById("mensagem-feedback");
-
-function limparErros() {
-    document.querySelectorAll(".erro").forEach(span => span.textContent = "");
-    document.querySelectorAll(".erro-campo").forEach(el => el.classList.remove("erro-campo"));
-}
-
-function limparCampos() {
-    document.getElementById("nome").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("telefone").value = "";
-    document.getElementById("msg").value = "";
-}
 
 form.addEventListener("submit", function (event) {
     event.preventDefault();
+
     limparErros();
 
     const nome = document.getElementById("nome");
@@ -24,42 +19,40 @@ form.addEventListener("submit", function (event) {
     const msg = document.getElementById("msg");
 
     let erro = false;
+    let primeiroErroCampo = null;
 
-    // Verificação de formulario vazio ao enviar!
-    if (nome.value.trim() === ""){
+    if (nome.value.trim() === "") {
         document.getElementById("erro-nome").textContent = "Digite seu nome.";
         nome.classList.add("erro-campo");
         erro = true;
+        if (!primeiroErroCampo) primeiroErroCampo = nome;
     }
 
-    if (!email.value.includes("@") || !email.value.includes(".")){
+    if (!email.value.includes("@") || !email.value.includes(".")) {
         document.getElementById("erro-email").textContent = "Digite um e-mail válido";
         email.classList.add("erro-campo");
         erro = true;
+        if (!primeiroErroCampo) primeiroErroCampo = email;
     }
 
     if (telefone.value.trim().length < 9) {
         document.getElementById("erro-telefone").textContent = "Telefone incompleto";
         telefone.classList.add("erro-campo");
         erro = true;
+        if (!primeiroErroCampo) primeiroErroCampo = telefone;
     }
 
-    if (msg.value.trim().length <10){
+    if (msg.value.trim().length < 10) {
         document.getElementById("erro-msg").textContent = "Digite uma mensagem com pelo menos 10 caracteres";
         msg.classList.add("erro-campo");
         erro = true;
+        if (!primeiroErroCampo) primeiroErroCampo = msg;
     }
 
-    if (erro) return;
+    if (erro) {
+        primeiroErroCampo.focus(); // Apenas foca, sem scroll
+        return;
+    }
 
-    // Mensagem de sucesso
-    feedback.textContent = "Mensagem enviada com sucesso!";
-    feedback.style.color = "green";
-
-    // Limpar os campos
-    limparCampos();
-
-    // sumir com a mensagem depois de 3 segundos
-    setTimeout(() => feedback.textContent = "", 3000);
-
+    form.submit();
 });

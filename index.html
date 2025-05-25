@@ -16,7 +16,7 @@
 
         <section>
 
-            <div class="logoIcon">
+            <div class="containeVertical">
 
                 <img src="./images/logo-agencia-drs.png" class="fotoLogo revelar" alt="logo da agência">
 
@@ -42,18 +42,18 @@
                 </div>
 
                 <a href="https://wa.me/5581983483354" class="botaoTopo revelar">
-                    <button class="btn-contato">Faça um Orçamento sem Compromisso</button>
+                    <button class="btn-contato">Faça um Orçamento sem Compromisso <img src="./images/icone-whatsapp.png" class="iconeWhatsapp" alt="foto-whatsapp"></button>
                 </a>
 
             </div>
 
         </section>
 
-        <section class="copy1">
+        <section class="container">
 
-            <div class="logoIcon">
+            <div class="containeVertical">
 
-                <h2 class="revelar">Por que você Precisa de um Site de Alta Conversão?</h2>
+                <h2 class="revelar">Por que você Precisa de um <span>Site de Alta Conversão?</span></h2>
 
                 <div class="copyArgumentos">
 
@@ -84,16 +84,16 @@
                 </div>
 
                 <a href="https://wa.me/5581983483354" class="botaoCopy revelar">
-                    <button class="btn-contato">Orçamento sem Compromisso</button>
+                    <button class="btn-contato">Faça um Orçamento sem Compromisso <img src="./images/icone-whatsapp.png" class="iconeWhatsapp" alt="foto-whatsapp"></button>
                 </a>
 
             </div>
 
         </section>
 
-        <section class="copy1">
+        <section class="container">
 
-            <div class="logoIcon">
+            <div class="containeVertical">
 
                 <h2 class="revelar">Nossas Vantagens</h2>
 
@@ -101,7 +101,7 @@
 
                     <div class="argumentos">
 
-                        <h3 class="revelar"> <img src="./images/foto-quebraCabça.png" class="iconeVantagem" alt="logo-raio">Design Personalizado</h3>
+                        <h3 class="revelar"> <img src="./images/foto-quebraCabça.png" class="iconeImagem" alt="logo-raio">Design Personalizado</h3>
 
                         <p class="revelar">Desenvolvimento 100% focado na identidade visual e nos objetivos do seu negócio.</p>
 
@@ -109,7 +109,7 @@
 
                     <div class="argumentos">
 
-                        <h3 class="revelar"> <img src="./images/foto-raio.png" class="iconeVantagem" alt="logo-raio">Rápido e Responsivo</h3>
+                        <h3 class="revelar"> <img src="./images/foto-raio.png" class="iconeImagem" alt="logo-raio">Rápido e Responsivo</h3>
 
                         <p class="revelar">Sites leves e otimizados para oferecer a melhor experiência em qualquer dispositivo.</p>
 
@@ -117,7 +117,7 @@
 
                     <div class="argumentos">
 
-                        <h3 class="revelar"> <img src="./images/foto-seo1.png" class="iconeVantagem" alt="logo-raio">Otimização para SEO</h3>
+                        <h3 class="revelar"> <img src="./images/foto-seo1.png" class="iconeImagem" alt="logo-raio">Otimização para SEO</h3>
 
                         <p class="revelar">Seu site pronto para ser encontrado facilmente no Google e outros mecanismos de busca.</p>
 
@@ -130,30 +130,55 @@
 
         </section>
 
-        <section class="copy1">
+        <section class="container">
+                
+                <h2 class="revelar">Perguntas Frequentes</h2>
 
-            <h2 class="tituloFormulario revelar">FALA <span>COMIGO.</span></h2>
+                <div class="quiz">
+
+                    <dl>
+                        <dt class="revelar">Por que eu preciso de um site? <span>+</span></dt>
+                        <dd>Um site profissional aumenta sua visibilidade online e atrai mais clientes.</dd>
+        
+                        <dt class="revelar">Quanto tempo leva para criar um site? <span>+</span></dt>
+                        <dd>O prazo varia conforme a complexidade, mas geralmente entregamos em até 15 dias úteis.</dd>
+        
+                        <dt class="revelar">O site será responsivo? <span>+</span></dt>
+                        <dd>Sim! Todos os nossos sites são otimizados para celular, tablet e desktop.</dd>
+                    </dl>
+
+                </div>
+
+        </section>
+
+        <section class="container">
+
+            <h2 class="tituloFormulario revelar">Entre em <span>Contato.</span></h2>
 
             <div class="formulario">
 
-                <form id="form-contato" class="revelar">
-        
-                    <input type="text" name="" id="nome" class="revelar" placeholder="Seu Nome Completo:" required>
+                <form action="https://formsubmit.co/dyeggodrs1@gmail.com" method="POST" id="form-contato" class="revelar">
+                    <!-- Proteção contra spam e redirecionamento -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html">
+
+                    <input type="text" name="nome" id="nome" class="revelar" placeholder="Seu Nome Completo:" required>
                     <span class="erro" id="erro-nome"></span>
-        
-                    <input type="text" name="" id="email" class="revelar" placeholder="Seu E-mail:" required>
+
+                    <input type="email" name="email" id="email" class="revelar" placeholder="Seu E-mail:" required>
                     <span class="erro" id="erro-email"></span>
-        
-                    <input type="text" name="" id="telefone" class="revelar" placeholder="Seu Celular:" required>
+
+                    <input type="text" name="numero" id="telefone" class="revelar" placeholder="Seu Celular:" required>
                     <span class="erro" id="erro-telefone"></span>
-        
-                    <textarea name="" id="msg" class="revelar" placeholder="Sua Mensagem:" required></textarea>
+
+                    <textarea name="texto" id="msg" class="revelar" placeholder="Sua Mensagem:" required></textarea>
                     <span class="erro" id="erro-msg"></span>
-        
-                    <div class="btn-enviar revelar"><input type="submit" class="botaoEnviar" value="Enviar"></div>
-        
+
+                    <div class="btn-enviar revelar">
+                        <input type="submit" class="botaoEnviar" value="Enviar">
+                    </div>
+
                     <p id="mensagem-feedback"></p>
-        
                 </form>
 
             </div>
@@ -180,8 +205,9 @@
 
     </footer>
 
-    <script src="./scripts/script.js" defer></script>
     <script src="./scripts/formulario.js" defer></script>
+    <script src="./scripts/script.js" defer></script>
+    <script src="./scripts/quiz.js" defer></script>
 
 </body>
 
