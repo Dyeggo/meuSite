@@ -162,6 +162,7 @@ h3 {
 .iconeImagem {
     width: 5rem;
 }
+
 .iconeWhatsapp {
     width: 2rem;
 }
@@ -298,15 +299,21 @@ footer a {
 
 @media (max-width: 600px) {
     h1 {
-        font-size: 3.8rem;
-        line-height: 4.2rem;       /* 42px */
-        text-align: center
+        font-size: 4.5rem;
+        line-height: 4.6rem;       /* 42px */
+        text-align: center;
     }
 
     h2 {
         font-size: 3.2rem;
         line-height: 3.6rem;
     }
+
+    p {
+        font-size: 1.4rem;
+        text-align: justify;
+    }
+
     .minhaFoto {
         width: 100%;
         max-width: 40rem;          /* 400px */
@@ -326,24 +333,17 @@ footer a {
     }
 
     .argumentos {
-        width: 100%;
-        margin: 0.5rem 0;        /* 80px */
+        margin: 4rem 0;        /* 80px */
+    }
+
+    h3 {
+        font-size: 2rem;       /* 20px */
+        text-align: center;
     }
 
     .iconeImagem {
-        width: 1rem;
-        height: auto;
-    }
+    width: 4rem;
+}
 
-    .iconeWhatsapp {
-        width: 1rem;
-    }
-
-    .botaoCopy {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
-    }
 
 }

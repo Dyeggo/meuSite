@@ -14,7 +14,7 @@ const observer = new IntersectionObserver((entradas) => {
     }
   });
 }, {
-  threshold: 0.5 // dispara quando 50% da seção estiver visível
+  threshold: 0.4 // dispara quando 50% da seção estiver visível
 });
 
 secoes.forEach(secao => observer.observe(secao));
